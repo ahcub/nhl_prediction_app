@@ -6,23 +6,3 @@ formulas for probability calculation
     ASN: Average amount of shoots on goal
     SP: Percent of successive shoots
 
-2) match_based_probabilities
-    player_scoring_probability = (GS / GP) * ZRS * 100
-
-    GS: number of games player scored
-    GP: number of games player played
-    ZRS: current amount of streak of games player didn't scored
-    100: percentage multiplier
-
-3) player_stat_with_teams_factor
-    player_scoring_probability = (ASN * SP) + ATH - (ETD / 5.0)
-
-    ASN: Average amount of shoots on goal
-    SP: Percent of successive shoots
-    ATH: Ally team help index (sum of (PPI - NPI) for each player)
-        PPI: positive participation on ice by radegast index
-        NPI: negative participation on ice by radegast index
-    ETD: Enemy team defence index (sum of (ZS / Z) for each player)
-        ZS: blocked shoots for all games
-        Z: Games played
-    5.0: is to normalize ETD
